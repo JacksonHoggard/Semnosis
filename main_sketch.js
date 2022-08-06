@@ -11,7 +11,7 @@ function modelLoaded() {
 
     classifier = featureExtractor.classification();
 
-    classifier.load('model.json');
+    classifier.load('./model.json');
 
     input = createFileInput(handleImage);
     textRes = "ready";
