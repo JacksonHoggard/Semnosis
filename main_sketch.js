@@ -33,11 +33,9 @@ function draw() {
 function handleImage(file) {
   console.log(file);
 
-  if(userImage != null)
-    userImage.hide();
   if (file.type === 'image') {
     userImage = createImg(file.data, '');
-    userImage.show();
+    userImage.hide();
   } else {
     userImage = null;
   }
