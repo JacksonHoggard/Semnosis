@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+    <title>Train Model</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="favicon.ico"/>
+    <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
+</head>
+<body>
+    <h1>Model Training</h1>
+    
+    <div>
+        <input type="file" id="uploader" multiple accept="image/*"/>
+        <select id="labelSelector">
+            <option value="cancerous">Cancerous</option>
+            <option value="benign">Benign</option>
+        </select>
+        <button onclick="addImages()">Add Training Images</button>
+    </div>
+    <div>
+        <button onclick="trainModel()">Train Model</button>
+        <div id="loss"></div>
+    </div>
+
+    <script src="./train.js"></script>
+</body>
+</html>
